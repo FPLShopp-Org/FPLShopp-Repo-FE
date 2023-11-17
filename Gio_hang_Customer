@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+        table {
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+
+        #quantity {
+            width: 40px;
+            text-align: center;
+        }
+
+
+
+        img {
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+    </head>
+
+    <body>
+        <table style="width: 700px; margin-left: auto; margin-right: auto;">
+            <tr>
+                <th colspan="5">Giỏ hàng</th>
+
+            </tr>
+            <th>#</th>
+            <th>Sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th></th>
+            <tr>
+                <td>1</td>
+                <td>
+                    <img src="img/ip15promax.jfif" alt="">
+                    iPhone 15 promax
+                </td>
+                <td>35.000.000đ</td>
+                <td>
+                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </td>
+                <td>
+                    <button class="button1">Xóa</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>
+                    <img src="img/ip14promax.jfif" alt="">
+                    iPhone 14 Promax
+                </td>
+                <td>32.000.000đ</td>
+                <td>
+                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </td>
+                <td>
+                    <button class="button1">Xóa</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>
+                    <img src="img/ip13promax.jfif" alt="">
+                    iPhone 13 Promax
+                </td>
+                <td>28.000.000đ</td>
+                <td>
+                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button class="quantity-btn" onclick="decreaseQuantity()">+</button>
+                </td>
+                <td>
+                    <button class="button1">Xóa</button>
+                </td>
+            </tr>
+
+            <tr>
+
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Tổng tiền</th>
+                <th>95.000.000đ</th>
+            </tr>
+
+            <tr>
+
+                <th><button class="button1">Thoát</button></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th><button class="button1">Thanh toán</button></th>
+            </tr>
+        </table>
+    </body>
+
+</html>
