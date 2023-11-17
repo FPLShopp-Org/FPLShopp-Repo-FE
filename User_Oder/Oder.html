@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tao don hang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- FFont Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Router-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<body>
+   
+    <header class="row header container-fluid">
+        <div class="col-2">
+            <img class="logo" src="/image/logo.jpg" style="width: 40%; height:100px;">
+        </div>
+        <div class="col-6">
+            <form class="form-inline search-bar mt-4 row">
+                <input class="form-control col-10 mb-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-danger col-2 mb-3" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-4">
+            <div class="row mt-3 mb-3">
+                <div class="col-3"></div>
+                <div class="account-btn col-4">
+                    <i class="fa fa-user fa-2x mt-1" aria-hidden="true"></i>
+                    <p class="ml-3 mt-2">Tài khoản</p>
+                </div>
+                <div class="account-btn col-4 ml-3">
+                    <i class="fa fa-shopping-cart fa-2x mt-1" aria-hidden="true"></i>
+                    <p class="ml-3 mt-2">Giỏ hàng</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h2 class="title">Đặt Hàng</h2>
+    <div class="container">
+        <div class="infor_payment__wrapper">
+            <div class="infor_delivery">
+                <div class="title">
+                    <span>Thong tin giao hang</span>
+                </div>
+                <form class="infor_delivery_form">
+                    <div>
+                        <div class="infor_delivery_input">
+                            <span class="title_input">Ho ten:</span><br>
+                            <input type="text" id="fname" name="fname" style="width: 100%;"><br>
+                        </div>
+                        <div>
+                            <label for="fname">Email</label><br>
+                            <input type="text" id="fname" name="fname" style="width: 100%;"><br>
+                        </div>
+                        <div>
+                            <label for="fname">Wards:</label><br>
+                            <input type="text" id="fname" name="fname" style="width: 100%;"><br>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="infor_delivery_input">
+                            <span class="title_input">So dien thoai:</span><br>
+                            <input type="text" id="fname" name="fname" style="width: 100%;"><br>
+                        </div>
+                        <div>
+                            <label for="fname">District</label><br>
+                            <input type="text" id="fname" name="fname" style="width: 100%;"><br>
+                        </div>
+                        <div>
+                            <label for="fname">City/Province:</label><br>
+                            <input type="text" id="fname" name="fname" style="width: 100%;"><br>
+                        </div>
+                    </div>
+                  </form>
+                  <div class="address">
+                    <label for="fname">Dia chi</label><br>
+                    <input type="text" id="fname" name="fname" style="width: 100%; height: 100px;"><br>
+                </div>
+            </div>
+            <div class="payment_method">
+                <div class="title">
+                    <span>Phuong thuc thanh toan</span>
+                </div>
+                <form class="payment_method_form">
+                    <input type="radio" id="a" name="fav_language">
+                    <label for="a">Thanh toan bang tien mat</label><br>
+                    <input type="radio" id="b" name="fav_language">
+                    <label for="b">Thanh toan khi nhan hang</label><br>
+                    <input type="radio" id="c" name="fav_language">
+                    <label for="c">Visa card, master card</label><br>
+                    <input type="radio" id="d" name="fav_language">
+                    <label for="d">Chuyen khoan</label><br>
+                    <input type="radio" id="e" name="fav_language">
+                    <label for="e">Zalopay</label><br>
+                  </form>
+            </div>
+        </div>
+       
+        <div class="infor_order_payment_detail__wrapper">
+            <div class="infor_order">
+                <div class="title">
+                    <span>Thong tin don hang</span>
+                </div>
+                <div class="infor_order__wrapper">
+                    <div>
+                        <img src="image/iphone-14-pro-max-dd-1.png" alt="">
+                    </div>
+                    <div class="table__wrapper">
+                        <div style="display: flex;">
+                            <div style="margin-right: 60px;">
+                                <p>Iphone 12prm</p>
+                                <p style="margin-top: 30px;">Color: blue</p>
+                            </div>
+                            <div style="margin-right: 60px; text-align: center;">
+                                <p>So luong</p>
+                                <p style="margin-top: 30px;">1</p>
+                            </div>
+                            <div style="margin-right: 60px; text-align: center;">
+                                <p>Gia</p>
+                                <p style="margin-top: 30px;">17.000.000</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <p>Tong tien</p>
+                                <p style="margin-top: 30px;">17.000.000</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Ghi chu:</p>
+                            <input type="text" style="width: 90%; height: 30px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment_detail">
+                <div class="title">
+                    <span>Chi tiet thanh toan</span>
+                </div>
+                <div class="payment_detail__content">
+                    <div class="total_money">
+                        <span>Tong tien</span>
+                        <span>800.000 VND</span>
+                    </div>
+                    <div class="money_ship">
+                        <span>Tong tien</span>
+                        <span>800.000 VND</span>
+                    </div>
+                    <button>Dat hang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

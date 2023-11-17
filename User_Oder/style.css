@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    border: solid black 2px;
+    width: 60%;
+    height: auto;
+    margin: 100px auto;
+    padding: 30px 30px;
+} 
+.infor_payment__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.infor_delivery {
+    width: 57%;
+    height: 500px;
+    border: solid black 2px;
+}
+
+.payment_method {
+    width: 40%;
+    height: 500px;
+    border: solid black 2px;
+}
+
+.infor_order_payment_detail__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.infor_order {
+    width: 57%;
+    height: 350px;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment_detail {
+    width: 40%;
+    height: 350px;
+    border: solid black 2px;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    border-bottom: solid black 2px;
+    text-align: center;
+    line-height: 50px;
+}
+.title span {
+    font-weight: 600;
+}
+
+.infor_delivery_form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+
+.infor_delivery input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 35px;
+}
+
+.address {
+    padding: 0 30px;
+}
+.address input {
+    width: 100%;
+    height: 120px;
+}
+
+.payment_method_form {
+    padding: 50px 40px;
+}
+
+.payment_method_form label {
+    font-size: 20px;
+}
+
+.payment_method_form input {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+input[type='radio'] { 
+    transform: scale(1.5);
+    font-weight: bold;
+}
+
+.infor_order__wrapper {
+    width: 95%;
+    height: 74%;
+    border: solid black 2px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+img {
+    width: 150px;
+    height: 200px;
+    object-fit: fill;
+}
+.table__wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 35px 30px;
+}
+.payment_detail__content{
+    padding: 50px 60px;
+    font-size: 19px;
+}
+.total_money{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.money_ship{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #f34238;
+    color: white;
+    font-size: 18px;
+    border: 0;
+}

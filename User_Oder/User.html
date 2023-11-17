@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản Lý Khách Hàng</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #dddddd;
+        }
+        
+        .pagination {
+            display: inline-block;
+        }
+        
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+        }
+        
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+        
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- FFont Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Router-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<body>
+    <header class="row header container-fluid">
+        <div class="col-2">
+            <img class="logo" src="/image/logo.jpg" style="width: 40%; height:100px;">
+        </div>
+        <div class="col-6">
+            <form class="form-inline search-bar mt-4 row">
+                <input class="form-control col-10 mb-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-danger col-2 mb-3" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-4">
+            <div class="row mt-3 mb-3">
+                <div class="col-3"></div>
+                <div class="account-btn col-4">
+                    <i class="fa fa-user fa-2x mt-1" aria-hidden="true"></i>
+                    <p class="ml-3 mt-2">Tài khoản</p>
+                </div>
+                <div class="account-btn col-4 ml-3">
+                    <i class="fa fa-shopping-cart fa-2x mt-1" aria-hidden="true"></i>
+                    <p class="ml-3 mt-2">Giỏ hàng</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h2 class="title">Quản Lý Khách Hàng</h2>
+    
+    <input type="text" id="searchInput" onkeyup="searchUser()" placeholder="Tìm kiếm theo họ và tên">
+    
+    <table id="usersTable">
+        <tr>
+            <th>Mã số</th>
+            <th>Họ và tên</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Ngày sinh</th>
+           
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Nguyễn Văn A</td>
+            <td>test1@example.com</td>
+            <td>0123456789</td>
+            <td>01/01/1990</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Trần Thị B</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Nguyễn Thị C</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Nguyễn Văn D</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Trần Thị B</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Trần Thị B</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Trần Thị B</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Trần Thị B</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Trần Thị B</td>
+            <td>test2@example.com</td>
+            <td>0987654321</td>
+            <td>02/02/1995</td>
+            
+        </tr>
+        <!-- Các dòng dữ liệu khác -->
+    </table>
+    
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+    </div>
+    
+    <script>
+        function searchUser() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("usersTable");
+            tr = table.getElementsByTagName("tr");
+        
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
