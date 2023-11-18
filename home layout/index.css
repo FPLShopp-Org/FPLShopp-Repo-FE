@@ -39,8 +39,7 @@
 
 /* -----------------menu-------------- */
 .menu{
-    background-color: black;
-    padding-top: -50%;
+
     
 }
 
@@ -51,7 +50,7 @@
 }
 
 .menu a:hover{
-    color: azure;
+    color: rgb(177, 0, 0);
 }
 
 
