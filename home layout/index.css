@@ -32,25 +32,51 @@
     max-width: 100%;
 }
 
+.account-btn:hover{
+    background-color: rgb(177, 0, 0);
+    color: rgb(209, 209, 209);
+}
+
 /* -----------------menu-------------- */
 .menu{
+    background-color: black;
+    padding-top: -50%;
     
 }
 
-.category{
-    border-radius: 10px;
+.menu a{
+    color: red;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.menu a:hover{
+    color: azure;
 }
 
 
+/* =================== category =================== */
+.category{
+    border-radius: 10px;
+    border: 0.3px solid black;
+}
+
+.category a{
+    color: black
+    /*  */
+}
+
 .category .col-2{
-    border: 0.3px solid red;
+    /* border: 0.3px solid black; */
+    border-radius: 10px;
     
 }
 
 .category .col-2:hover{
-    background-color: rgb(236, 121, 121);
+    background-color: rgb(165, 165, 165);
     text-decoration: none;
     color: white;
+    
 }
 
 /* ======================= hot product ============== */
@@ -72,8 +98,19 @@
 .hot .card{
     margin: 0 1%;
     width: 16%;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
+    
+}
+
+.hot img{
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+    
+.hot .card p{
+    color: crimson;
+    font-weight: bold;
 }
 
 .new{
@@ -98,9 +135,22 @@
     border-radius: 10px;
     padding: 10px;
 }
+
+.new .card p{
+    color: crimson;
+    font-weight: bold;
+}
 /* ================== footer =============== */
 .footer{
     background-color: black;
     border-top: 1px double burlywood;
     color: white;
+}
+
+
+/* ============== Slide ================ */
+.slide img{
+    border: 1px solid red;
+    border-radius: 10px;
+    
 }
