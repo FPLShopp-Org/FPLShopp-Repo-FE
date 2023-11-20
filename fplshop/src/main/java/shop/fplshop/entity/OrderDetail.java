@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -21,4 +23,12 @@ public class OrderDetail implements Serializable{
 
     Integer quantity;
     
+    //FK
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    Order order;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    Product product;
 }
