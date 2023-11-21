@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Customize header color */
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Add some padding to the body */
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h2>Quản lý nhân viên</h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Tài khoản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đơn hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nhân viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Khách hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thống kê</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Employee Table -->
+    <div class="container mt-4">
+        <h3>Danh sách nhân viên</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Employee data will be dynamically populated here -->
+            </tbody>
+        </table>
+
+        <!-- Buttons for CRUD operations -->
+        <button class="btn btn-primary" onclick="createEmployee()">Create</button>
+        <button class="btn btn-warning" onclick="updateEmployee()">Update</button>
+        <button class="btn btn-danger" onclick="deleteEmployee()">Delete</button>
+        <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for CRUD operations -->
+    <script>
+        function createEmployee() {
+            var name = prompt("Enter employee name:");
+            var email = prompt("Enter employee email:");
+            var address = prompt("Enter employee address:");
+            var phone = prompt("Enter employee phone:");
+
+            var table = document.getElementById('employeeTable').getElementsByTagName('tbody')[0];
+            var row = table.insertRow(table.rows.length);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+
+            cell1.innerHTML = name;
+            cell2.innerHTML = email;
+            cell3.innerHTML = address;
+            cell4.innerHTML = phone;
+            cell5.innerHTML = '<input type="radio" name="employeeRadio">';
+        }
+
+
+        function updateEmployee() {
+            // Implement update operation here
+            var selectedRadio = document.querySelector('input[name="employeeRadio"]:checked');
+
+            if (selectedRadio) {
+                var name = prompt("Enter updated name:");
+                var email = prompt("Enter updated email:");
+                var address = prompt("Enter updated address:");
+                var phone = prompt("Enter updated phone:");
+
+                var row = selectedRadio.closest('tr');
+                row.cells[0].innerHTML = name;
+                row.cells[1].innerHTML = email;
+                row.cells[2].innerHTML = address;
+                row.cells[3].innerHTML = phone;
+            } else {
+                alert('Please select an employee to update.');
+            }
+        }
+
+        function deleteEmployee() {
+            var selectedRadio = document.querySelector('input[name="employeeRadio"]:checked');
+
+            // Check if any radio button is selected
+            if (selectedRadio) {
+                // Get the selected row and remove it
+                var selectedRow = selectedRadio.closest('tr');
+                selectedRow.remove();
+            } else {
+                alert('Please select an employee to delete.');
+            }
+        }
+
+        function resetForm() {
+            var selectedRadio = document.querySelector('input[name="employeeRadio"]:checked');
+            if (selectedRadio) {
+                selectedRadio.checked = false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
