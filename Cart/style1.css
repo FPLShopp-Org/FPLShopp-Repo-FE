@@ -1,0 +1,50 @@
+body{
+    background-color: #4caf50;
+}
+header {
+
+    margin-left: 5%;
+    color: orange;
+    padding: 10px;
+}
+
+img{
+    height: 8%;
+    width: 8%;
+}
+
+#quantity {
+    width: 30px;
+    text-align: center;
+    height: 26px;
+}
+.quantity-btn{
+    background-color: white;
+}
+table{
+    text-align: center;
+    background-color: white;
+}
+.cart {
+    width: 90%;
+    margin: 0 auto;
+}
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4%;
+}
+.cart-summary p{
+    color: red;
+    margin-left: 75%;
+    margin-top: 25px;
+   
+}
+tbody{
+    margin-top: 200px;
+}
+
+.sexContent{
+  width: 100%;
+}
