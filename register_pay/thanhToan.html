@@ -3,142 +3,100 @@
 
 <head>
     <title>Title</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="index.css">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div>
-        <header class="row header container-fluid">
-            <div class="col-2">
-                <img class="logo" src="./images/logo.jpg" alt="">
+    <div class="container">
+        <div class="left">
+            <h2>Thông Tin Khách Hàng</h2>
+            <br>
+            <!-- Các input thông tin khách hàng -->
+            <div class="input-group">
+                <label for="paymentMethod">Phương Thức:</label>
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="tienMat">Tiền mặt</option>
+                    <option value="chuyenKhoan">Chuyển Khoản</option>
+                    <option value="shipCOD">Ship COD</option>
+                </select>
             </div>
-            <div class="col-6">
-                <form class="form-inline search-bar mt-4 row">
-                    <input class="form-control col-10 mb-3" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-danger col-2 mb-3" type="submit">Search</button>
-                </form>
+            <div class="input-group">
+                <label for="">Họ tên:</label>
+                <input type="text" id="" name="" value="Nguyễn văn A" readonly>
             </div>
-            <div class="col-4">
-                <div class="row mt-3 mb-3">
-                    <div class="col-3"></div>
-                    <div class="account-btn col-4">
-                        <i class="fa fa-user fa-2x mt-1" aria-hidden="true"></i>
-                        <p class="ml-3 mt-2">Tài khoản</p>
-                    </div>
-                    <div class="account-btn col-4 ml-3">
-                        <i class="fa fa-shopping-cart fa-2x mt-1" aria-hidden="true"></i>
-                        <p class="ml-3 mt-2">Giỏ hàng</p>
-                    </div>
-                </div>
+            <div class="input-group">
+                <label for="">Giới tính:</label>
+                <input type="text" id="" name="" value="Nam" readonly>
             </div>
-        </header>
-
-        <div class="container">
-            <div class="left">
-                <h2>Thông Tin Thanh Toán</h2>
-                <!-- ... [Code for payment information] ... -->
-                <div class="input-group">
-                    <label for="paymentMethod">Phương Thức:</label>
-                    <select id="paymentMethod" name="paymentMethod">
-                        <option value="creditCard">Thẻ Tín Dụng</option>
-                        <option value="bankTransfer">Chuyển Khoản Ngân Hàng</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="bank">Ngân hàng:</label>
-                    <input type="text" id="bank" name="bank" value="FPT" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="accountName">Tên Tài Khoản:</label>
-                    <input type="text" id="accountName" name="accountName" value="NGUYỄN VĂN A" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="accountNumber">Số Tài Khoản:</label>
-                    <input type="text" id="accountNumber" name="accountNumber" value="0123456789" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="description">Nội Dung:</label>
-                    <input type="text" id="description" name="description" value="Thanh toán sản phẩm" readonly>
-                </div>
+            <div class="input-group">
+                <label for="">Địa chỉ:</label>
+                <input type="text" id="" name="" value="123 Đà Nẵng" readonly>
             </div>
-
-            <div class="right">
-                <h2>Thông Tin Đơn Hàng</h2>
-                <!-- ... [Code for order information] ... -->
-                <div class="input-group">
-                    <label for="shippingAddress">Địa Chỉ Nhận Hàng:</label>
-                    <input type="text" id="shippingAddress" name="shippingAddress" value="Quảng Nam" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="totalAmount">Tổng Tiền Đặt Hàng:</label>
-                    <input type="text" id="totalAmount" name="totalAmount" value="3.000.000 Đ" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="shippingFee">Phí Vận Chuyển:</label>
-                    <input type="text" id="shippingFee" name="shippingFee" value="30.000 Đ" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="totalPayment">Tổng Thanh Toán:</label>
-                    <input type="text" id="totalPayment" name="totalPayment" value="3.030.000 Đ" readonly>
-                </div>
-                <div class="input-group">
-                    <button type="submit">Thanh Toán</button>
-                </div>
+            <div class="input-group">
+                <label for="">Điện thoại:</label>
+                <input type="text" id="" name="" value="0123456789" readonly>
             </div>
-
-            <div class="bottom">
-                <h2>Chi Tiết Sản Phẩm</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Sản Phẩm</th>
-                            <th>Đơn Giá</th>
-                            <th>Số Lượng</th>
-                            <th>Thành Tiền</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>IPHONE XS MAX</td>
-                            <td>1.000.000 Đ</td>
-                            <td>2</td>
-                            <td>2.000.000 Đ</td>
-                        </tr>
-                        <tr>
-                            <td>NOKIA LUMIA</td>
-                            <td>1.000.000 Đ</td>
-                            <td>1</td>
-                            <td>1.000.000 Đ</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="input-group">
+                <label for="">Email:</label>
+                <input type="text" id="" name="" value="anv@gmail.com" readonly>
+            </div>
+            <div class="input-group">
+                <label for="">Sinh nhật:</label>
+                <input type="text" id="" name="" value="01/01/2003" readonly>
+            </div>
+            <div class="input-group">
+                <label for="">CMND:</label>
+                <input type="text" id="" name="" value="23415678990" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <button type="submit">ĐẶT HÀNG</button>
             </div>
         </div>
-    </div>
-
-    <footer class="footer container-fluid mt-3">
-        <div class="row">
-            <div class="col container mt-5">
-                <strong>FPLShop.vn</strong>
-                <div class="text-center">
-                    <p>@ 2023. Công ti TNHH FPL.
-                    </p>
-                    <p> Địa chỉ: Nguyễn Thị Thập, Phường Hòa Minh, Quận Thanh Khê, Thành phố Đà Nẵng.</p>
-                    <p>Điện thoại:
-                        0987654321 - Email: fplshop@gmail.com.</p>
-                    <p>Chịu trách nhiệm nội dung: nhóm 12</p>
-                </div>
-
-            </div>
+        <div class="right">
+            <h2>Giỏ Hàng</h2>
+            <br>
+            <!-- Bảng hiển thị giỏ hàng -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>IPHONE XS MAX</td>
+                        <td>2.000.000 Đ</td>
+                        <td>2</td>
+                        <td>4.000.000 Đ</td>
+                    </tr>
+                    <tr>
+                        <td>NOKIA LUMIA</td>
+                        <td>1.000.000 Đ</td>
+                        <td>1</td>
+                        <td>1.000.000 Đ</td>
+                    </tr>
+                    <tr>
+                        <td>IPHONE 10</td>
+                        <td>1.000.000 Đ</td>
+                        <td>3</td>
+                        <td>3.000.000 Đ</td>
+                    </tr>
+                    <tr>
+                        <td>Phí giao hàng:</td>
+                        <td></td>
+                        <td></td>
+                        <td>30.000 Đ</td>
+                    </tr>
+                    <tr>
+                        <td>TỔNG THÀNH TIỀN:</td>
+                        <td></td>
+                        <td></td>
+                        <td>8.030.000 Đ</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </footer>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
