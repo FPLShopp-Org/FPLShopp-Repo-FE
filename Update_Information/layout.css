@@ -1,0 +1,177 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+}
+.logo{
+    width: 40%;
+    height: 100%;
+}
+/* .search-bar{
+    width: 100%;
+} */
+.search-bar>input{
+    width: 80%;
+    height: 100%;
+}
+
+.account-btn{
+    display: inline-flex;
+    max-height: 50%;
+    color: black;
+    border-radius: 3px;
+}
+
+.account-btn>p{
+    font-size: larger;
+    font-weight: 700;
+    max-width: 100%;
+}
+
+.account-btn:hover{
+    color: gray;
+}
+
+/* =================== category =================== */
+.category{
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.category a{
+    color: rgb(101, 101, 101) ;
+    background-color: white;
+    
+    /*  */
+}
+
+
+.category .col-2{
+    /* border: 0.3px solid black; */
+    border-radius: 10px;
+    
+}
+
+.category .col-2:hover{   
+    text-decoration: none;
+    color: black;
+    box-shadow: inset 1px 1px 1px 1px gray; /* inset và màu xám */
+    
+}
+
+
+/* ================== footer =============== */
+.footer{
+    background-color: black;
+    border-top: 1px double burlywood;
+    color: white;
+}
+
+
+/* ============== Slide ================ */
+.slide img{
+    border: 1px solid red;
+    border-radius: 10px;
+    
+}
+
+img{
+    height: 8%;
+    width: 8%;
+}
+
+#quantity {
+    width: 30px;
+    text-align: center;
+    height: 26px;
+}
+.quantity-btn{
+    background-color: white;
+    height: 15%;
+    width: 15%;
+}
+table{
+    text-align: center;
+    background-color: white;
+}
+.cart {
+    width: 90%;
+    margin: 0 auto;
+}
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4%;
+}
+.cart-summary p{
+    color: red;
+    margin-left: 75%;
+    margin-top: 25px;
+   
+}
+tbody{
+    margin-top: 200px;
+}
+
+.sexContent{
+  width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 780px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-left: 220px;
+    width: 800px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.hh {
+    background-color: white;
+}
+select{
+    height: 40px;
+    width: 100%;
+    color: black;
+}
+
+textarea{
+    width: 100%;
+}
