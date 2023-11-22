@@ -18,8 +18,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @SuppressWarnings("serial")
-@Data
 @Entity
+@Data
 @Table(name = "Accounts")
 public class Account  implements Serializable{
     @Id
